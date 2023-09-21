@@ -1,0 +1,41 @@
+<link rel="stylesheet" type="text/css" href="/css/table.css">
+
+<h1>table</h1>
+<span>Total Records: <%=table.length%></span>
+<a href="/">back</a>
+<div id="container">
+<table class="table table-striped" id="all-records">
+    <thead>
+    <tr id="table-row">
+        <%for(let first_row of table[0]) {%>
+            <th><%=first_row%></th>
+        <%}%>
+    </tr>
+    </thead>
+    <tfoot>
+        <tr id="table-row">
+            <%for(let first_row of table[0]) {%>
+                <th><%=first_row%></th>
+            <%}%>
+        </tr>
+    </tfoot>
+   
+    <tbody>
+    <%for(let i=0;++i;table.length) {%>
+        <%if(i < table.length) {%>
+        <tr id="table-data">
+            <%for(let j of table[i]) {%>
+               
+                <td><%=j%></td>
+            <%}%>
+        </tr>
+        <%} else {%>
+            <%break%>
+        <%}%>
+
+    <%}%>
+
+    </tbody>
+</table>
+</div>
+<script src="/js/table.js"></script>
