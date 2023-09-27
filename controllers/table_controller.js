@@ -4,7 +4,7 @@ const csv=require('csv-parser');
 const path=require('path');
 const jsonToTable=require('json-to-table');
 
-
+//To view data of the csv file in table form.
 module.exports.viewData=async function(req,res){
     try{
     const results=[];
